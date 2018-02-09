@@ -1,0 +1,34 @@
+<wpml-config>
+	<admin-texts>
+		<key name='theme_mods_lawyeriax-lite'>
+			<key name='lawyeria_about_image' />
+			<key name='lawyeriax_about_heading' />
+			<key name='lawyeriax_about_text' />
+			<key name='modal_shortcode' />
+			<key name='case_studies_heading' />
+			<key name='case_studies_category' />
+			<key name='lawyeriax_clients_heading' />
+			<key name='footer_copyright' />
+			<key name='lawyeriax_lawyers_heading' />
+			<key name='lawyers_team_shortcode' />
+			<key name='lawyeriax_bigtitle_title' />
+			<key name='lawyeriax_bigtitle_text' />
+			<key name='lawyeriax_bigtitle_button_text' />
+			<key name='lawyeriax_bigtitle_button_link' />
+			<key name='lawyeriax_navbar_logo' />
+			<key name='news_heading' />
+			<key name='lawyeriax_practice_heading' />
+			<key name='news_category' />
+			<key name='footer_copyright' />
+			<key name='lawyeriax_ribbon_tagline' />
+			<key name='lawyeriax_slider_shortcode' />
+			<key name='testimonial_heading' />
+			<key name='lawyeriax_top_bar_phone_number' />
+			<key name='lawyeriax_top_bar_email_address' />
+			<key name='custom_logo' />
+			<key name='header_image' />
+			<key name='teammates_profile_button' />
+			<key name='teammates_members_number' />
+		</key>
+    </admin-texts>
+</wpml-config>
