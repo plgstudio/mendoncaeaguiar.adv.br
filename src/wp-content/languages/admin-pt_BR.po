@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.9.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-11-14 20:50:23+0000\n"
+"PO-Revision-Date: 2018-01-27 09:25:28+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,6 +25,10 @@ msgstr "0"
 msgctxt "default GMT offset or timezone string"
 msgid "0"
 msgstr "America/Sao_Paulo"
+
+#: wp-admin/customize.php:80
+msgid "This changeset cannot be further modified."
+msgstr "Este conjunto de alterações não pode mais ser modificado."
 
 #: wp-admin/about.php:262
 msgid "Improvements to Roles and Capabilities"
@@ -764,10 +768,6 @@ msgstr "https://br.wordpress.org/plugins/"
 #: wp-admin/customize.php:72 wp-admin/customize.php:81
 msgid "Customize New Changes"
 msgstr "Personalizar novas mudanças"
-
-#: wp-admin/customize.php:80
-msgid "This changeset has already been published and cannot be further modified."
-msgstr "Este conjunto de mudanças já foi publicado e não pode ser modificado."
 
 #: wp-admin/custom-background.php:391
 msgctxt "Original Size"
@@ -2644,7 +2644,7 @@ msgid "<a href=\"https://codex.wordpress.org/Managing_Plugins#Plugin_Management\
 msgstr "<a href=\"https://codex.wordpress.org/pt-br:Gerenciando_Plugins\">Documentação sobre gerenciamento de plugins</a>"
 
 #. translators: %s: the option/setting
-#: wp-admin/options.php:198
+#: wp-admin/options.php:200
 msgid "The %s setting is unregistered. Unregistered settings are deprecated. See https://codex.wordpress.org/Settings_API"
 msgstr "A definição de %s não esta registrada. Configurações não registradas são obsoletas. Veja: https://codex.wordpress.org/Settings_API"
 
@@ -2818,6 +2818,26 @@ msgstr "Página de posts"
 msgid "Close details dialog"
 msgstr "Fechar janela de informações"
 
+#: wp-admin/nav-menus.php:547
+msgid "To add a custom link, <strong>expand the Custom Links section, enter a URL and link text, and click Add to Menu</strong>"
+msgstr "Para adicionar um link personalizado, <strong>abra a seção Links Personalizados, insira um URL e o texto do link e clique em Adicionar ao menu</strong>"
+
+#: wp-admin/includes/template.php:1760
+msgid "Front Page"
+msgstr "Página principal"
+
+#: wp-admin/update-core.php:431
+msgid "New translations are available."
+msgstr "Novas traduções estão disponíveis."
+
+#: wp-admin/theme-install.php:332
+msgid "This theme has not been rated yet."
+msgstr "Este tema não foi avaliado ainda."
+
+#: wp-admin/includes/class-wp-screen.php:1125
+msgid "Number of items per page:"
+msgstr "Número de itens por página:"
+
 #. translators: Do not translate USERNAME, URL_DELETE, SITE_NAME: those are
 #. placeholders.
 #: wp-admin/ms-delete-site.php:48
@@ -2854,26 +2874,6 @@ msgstr ""
 "Obrigado por usar o site,\n"
 "Webmaster\n"
 "###SITE_NAME###"
-
-#: wp-admin/nav-menus.php:547
-msgid "To add a custom link, <strong>expand the Custom Links section, enter a URL and link text, and click Add to Menu</strong>"
-msgstr "Para adicionar um link personalizado, <strong>abra a seção Links Personalizados, insira um URL e o texto do link e clique em Adicionar ao menu</strong>"
-
-#: wp-admin/includes/template.php:1760
-msgid "Front Page"
-msgstr "Página principal"
-
-#: wp-admin/update-core.php:431
-msgid "New translations are available."
-msgstr "Novas traduções estão disponíveis."
-
-#: wp-admin/theme-install.php:332
-msgid "This theme has not been rated yet."
-msgstr "Este tema não foi avaliado ainda."
-
-#: wp-admin/includes/class-wp-screen.php:1125
-msgid "Number of items per page:"
-msgstr "Número de itens por página:"
 
 #: wp-admin/user-edit.php:49
 msgid "You can log out of other devices, such as your phone or a public computer, by clicking the Log Out Everywhere Else button."
@@ -5456,14 +5456,14 @@ msgstr "Agora você deve atualizar seu web.config."
 msgid "Plugin Homepage &#187;"
 msgstr "Página do plugin &#187;"
 
-#: wp-admin/export.php:48
-msgid "You can export a file of your site&#8217;s content in order to import it into another installation or platform. The export file will be an XML file format called WXR. Posts, pages, comments, custom fields, categories, and tags can be included. You can choose for the WXR file to include only certain posts or pages by setting the dropdown filters to limit the export by category, author, date range by month, or publishing status."
-msgstr "Você pode exportar um arquivo do conteudo do seu site para importar em outra instalação ou plataforma. O arquivo exportado será um arquivo em formato XML chamado WXR. Posts, páginas, comentários, campos personalizados, categorias e tags podem ser incluídos. Você pode escolher para que o arquivo WXR inclua apenas alguns posts ou páginas definindo os filtros nos menus e assim limitar a exportação por categoria, autor, intervalo de tempo por mês ou status de publicação."
-
 #. translators: 1: table name, 2: error message,
 #: wp-admin/maint/repair.php:117
 msgid "Failed to repair the %1$s table. Error: %2$s"
 msgstr "Erro ao corrigir a tabela %1$s. Erro: %2$s"
+
+#: wp-admin/export.php:48
+msgid "You can export a file of your site&#8217;s content in order to import it into another installation or platform. The export file will be an XML file format called WXR. Posts, pages, comments, custom fields, categories, and tags can be included. You can choose for the WXR file to include only certain posts or pages by setting the dropdown filters to limit the export by category, author, date range by month, or publishing status."
+msgstr "Você pode exportar um arquivo do conteudo do seu site para importar em outra instalação ou plataforma. O arquivo exportado será um arquivo em formato XML chamado WXR. Posts, páginas, comentários, campos personalizados, categorias e tags podem ser incluídos. Você pode escolher para que o arquivo WXR inclua apenas alguns posts ou páginas definindo os filtros nos menus e assim limitar a exportação por categoria, autor, intervalo de tempo por mês ou status de publicação."
 
 #: wp-admin/user-new.php:190
 msgid "New users will receive an email letting them know they&#8217;ve been added as a user for your site. This email will also contain their password. Check the box if you don&#8217;t want the user to receive a welcome email."
@@ -6057,7 +6057,7 @@ msgid "You can&#8217;t remove users."
 msgstr "Você não pode remover usuários."
 
 #: wp-admin/my-sites.php:54 wp-admin/options-head.php:15
-#: wp-admin/options.php:233
+#: wp-admin/options.php:235
 msgid "Settings saved."
 msgstr "Configurações salvas."
 
@@ -6585,7 +6585,7 @@ msgid ""
 msgstr ""
 "Este é o exemplo de uma página. É diferente de um post de blog porque é estática e pode aparecer em menus de navegação (na maioria dos temas). A maioria das pessoas começam com uma página 'Sobre' que as apresenta aos potenciais visitantes do site. Você pode usar algo como:\n"
 "\n"
-"<blockquote>Oi! Sou um estudante de Biologia e gosto de esportes e natureza. Nos fins-de-semana pratico futebol com meus amigos no clube local. Eu moro em Valinhos e fiz este site para falar sobre minha cidade.</blockquote>\n"
+"<blockquote>Oi! Sou um estudante de Biologia e gosto de esportes e natureza. Nos fins de semana pratico futebol com meus amigos no clube local. Eu moro em Valinhos e fiz este site para falar sobre minha cidade.</blockquote>\n"
 "\n"
 "...ou algo como:\n"
 "\n"
@@ -6730,13 +6730,13 @@ msgstr "Esta tela permite que você edite cinco campos de metadados em um arquiv
 msgid "The Available Widgets section contains all the widgets you can choose from. Once you drag a widget into a sidebar, it will open to allow you to configure its settings. When you are happy with the widget settings, click the Save button and the widget will go live on your site. If you click Delete, it will remove the widget."
 msgstr "A seção Widgets Disponíveis contém todos os widgets que você pode escolher. Quando você arrasta um widget para uma barra lateral, ele será aberto para permitir que você altere suas configurações. Quando estiver satisfeito com as configurações do widget, clique no botão Salvar e o widget aparecerá em seu site. Se você clicar em Excluir, removerá o widget."
 
-#: wp-admin/edit-form-advanced.php:417 wp-admin/media.php:76
-msgid "For images only, you can click on Edit Image under the thumbnail to expand out an inline image editor with icons for cropping, rotating, or flipping the image as well as for undoing and redoing. The boxes on the right give you more options for scaling the image, for cropping it, and for cropping the thumbnail in a different way than you crop the original image. You can click on Help in those boxes to get more information."
-msgstr "Apenas para imagens, você pode clicar em Editar Imagem sob a miniatura para expandir um editor de imagens em linha, com ícones para recortar, girar, ou virar a imagem e também para fazer e desfazer ações. As caixas à direita, fornecem mais opções para redimensionar a imagem, para recortá-la e para recortar a miniatura de forma diferente da imagem original. Você pode clicar em Ajuda nestas caixas para obter mais informações."
-
 #: wp-admin/edit-form-advanced.php:419 wp-admin/media.php:78
 msgid "Remember to click Update Media to save metadata entered or changed."
 msgstr "Lembre-se de clicar em Atualizar Mídia para salvar os metadados inseridos ou alterados."
+
+#: wp-admin/edit-form-advanced.php:417 wp-admin/media.php:76
+msgid "For images only, you can click on Edit Image under the thumbnail to expand out an inline image editor with icons for cropping, rotating, or flipping the image as well as for undoing and redoing. The boxes on the right give you more options for scaling the image, for cropping it, and for cropping the thumbnail in a different way than you crop the original image. You can click on Help in those boxes to get more information."
+msgstr "Apenas para imagens, você pode clicar em Editar Imagem sob a miniatura para expandir um editor de imagens em linha, com ícones para recortar, girar, ou virar a imagem e também para fazer e desfazer ações. As caixas à direita, fornecem mais opções para redimensionar a imagem, para recortá-la e para recortar a miniatura de forma diferente da imagem original. Você pode clicar em Ajuda nestas caixas para obter mais informações."
 
 #: wp-admin/user-new.php:335
 msgid "Email or Username"
@@ -8937,7 +8937,7 @@ msgstr "Links permanentes"
 msgid "Permalink Settings"
 msgstr "Configurações de links permanentes"
 
-#: wp-admin/options.php:247
+#: wp-admin/options.php:249
 msgid "All Settings"
 msgstr "Todas configurações"
 
@@ -10555,7 +10555,7 @@ msgid "Maximum size: %s"
 msgstr "Tamanho máximo: %s"
 
 #: wp-admin/includes/template.php:1994 wp-admin/nav-menus.php:659
-#: wp-admin/options.php:294
+#: wp-admin/options.php:296
 msgid "Save Changes"
 msgstr "Salvar alterações"
 
