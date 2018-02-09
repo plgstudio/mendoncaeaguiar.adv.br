@@ -20,6 +20,13 @@ msgstr "A constante %s não pode ser definida durante a criação de uma rede."
 msgid "You are about to delete the following sites:"
 msgstr "Você está prestes a excluir os seguintes sites:"
 
+<<<<<<< HEAD
+#: wp-admin/network/site-new.php:252
+msgid "The username and a link to set the password will be mailed to this email address."
+msgstr "O nome de usuário e um link para criação de senha serão enviados para este endereço de e-mail."
+
+=======
+>>>>>>> master
 #: wp-admin/network/site-users.php:237
 msgid "User could not be added to this site."
 msgstr "Não foi possível adicionar o usuário a este site."
@@ -543,6 +550,13 @@ msgstr "Sim, exclua esses temas."
 msgid "Delete Themes"
 msgstr "Excluir temas"
 
+<<<<<<< HEAD
+#: wp-admin/network/settings.php:420
+msgid "Enable menus"
+msgstr "Ativar menus"
+
+=======
+>>>>>>> master
 #: wp-admin/network/settings.php:170
 msgid "New registrations settings"
 msgstr "Configurações de novos registros"
@@ -914,13 +928,27 @@ msgstr "Detalhes da rede"
 msgid "Once you complete these steps, your network is enabled and configured. You will have to log in again."
 msgstr "Depois de concluir estas etapas, sua rede estará habilitada e configurada. Você terá que acessar de novo."
 
+#: wp-admin/network.php:64
+msgid "The choice of subdirectory sites is disabled if this setup is more than a month old because of permalink problems with &#8220;/blog/&#8221; from the main site. This disabling will be addressed in a future version."
+msgstr "A escolha de sites em subdiretórios fica desativada se a instalação tiver mais de um mês, isso porque acontecem problemas com links permanentes do blog principal. Esta incapacidade será corrigida em uma versão futura."
+
 #: wp-admin/network.php:61
 msgid "The next screen for Network Setup will give you individually-generated lines of code to add to your wp-config.php and .htaccess files. Make sure the settings of your FTP client make files starting with a dot visible, so that you can find .htaccess; you may have to create this file if it really is not there. Make backup copies of those two files."
 msgstr "A próxima tela de configuração de rede, vai lhe dar as linhas de código, individualmente geradas, para adicionar ao seu wp-config.php e arquivos .htaccess. Verifique se as configurações do seu cliente de FTP mostram arquivos que começam com ponto, para que você encontre o .htaccess; você pode ter que criar este arquivo se ele realmente não estiver lá. Faça cópias de segurança dos dois arquivos."
 
+<<<<<<< HEAD
+#: wp-admin/network.php:63
+msgid "Once you add this code and refresh your browser, multisite should be enabled. This screen, now in the Network Admin navigation menu, will keep an archive of the added code. You can toggle between Network Admin and Site Admin by clicking on the Network Admin or an individual site name under the My Sites dropdown in the Toolbar."
+msgstr "Após adicionar estes códigos e atualizar seu navegador, o multisite será ativado. Esta tela, agora no menu Administrador da Rede, manterá um arquivo dos códigos adicionados. Você pode alternar entre Administrador da Rede e Administrador de Site clicando em Administrador da Rede ou em cada site listado no menu suspenso Meus Sites, na Barra de Ferramentas."
+
+#: wp-admin/includes/network.php:394
+msgid "Enabling the Network"
+msgstr "Habilitando a rede"
+=======
 #: wp-admin/network.php:60
 msgid "Choose subdomains or subdirectories; this can only be switched afterwards by reconfiguring your installation. Fill out the network details, and click Install. If this does not work, you may have to add a wildcard DNS record (for subdomains) or change to another setting in Permalinks (for subdirectories)."
 msgstr "Escolha subdomínios ou subdiretórios. Isto só poderá ser alterado ao reconfigurar sua instalação. Preencha os detalhes da rede e clique em instalar. Se não funcionar, talvez você precise adicionar um registro de wildcard de DNS (para subdomínios) ou alterar para outra configuração de links permanentes (para subdiretórios)."
+>>>>>>> master
 
 #: wp-admin/includes/network.php:484
 msgid "To make your installation more secure, you should also add:"
@@ -1215,9 +1243,19 @@ msgstr "Contas de usuários podem ser cadastradas."
 msgid "Both sites and user accounts can be registered"
 msgstr "Contas de sites e de usuários podem ser cadastradas."
 
+<<<<<<< HEAD
+#: wp-admin/network/settings.php:172
+msgid "User accounts may be registered"
+msgstr "Contas de usuários podem ser cadastradas."
+
+#: wp-admin/network/settings.php:398
+msgid "Enable administration menus"
+msgstr "Ativar menus de administração"
+=======
 #: wp-admin/network/settings.php:173
 msgid "Logged in users may register new sites"
 msgstr "Usuários conectados podem cadastrar novos sites."
+>>>>>>> master
 
 #: wp-admin/network/settings.php:159
 msgid "Registration Settings"
@@ -1312,9 +1350,15 @@ msgstr "Primeiro comentário"
 msgid "First Page"
 msgstr "Primeira página"
 
+<<<<<<< HEAD
+#: wp-admin/network/site-new.php:264
+msgid "Add Site"
+msgstr "Adicionar site"
+=======
 #: wp-admin/network/settings.php:260
 msgid "The welcome email sent to new users."
 msgstr "O e-mail de boas-vindas enviado para novos usuários."
+>>>>>>> master
 
 #: wp-admin/network/settings.php:255
 msgid "Welcome User Email"
@@ -1352,9 +1396,19 @@ msgstr "Permitir novos registros de usuários"
 msgid "Duplicated username or email address."
 msgstr "Nome de usuário ou endereço de e-mail duplicados."
 
+<<<<<<< HEAD
+#: wp-admin/network/site-new.php:252
+msgid "A new user will be created if the above email address is not in the database."
+msgstr "Um novo usuário será criado se o endereço de e-mail acima não estiver no banco de dados."
+
+#: wp-admin/network/site-new.php:248
+msgid "Admin Email"
+msgstr "E-mail do admin"
+=======
 #: wp-admin/network/user-new.php:37
 msgid "Cannot create an empty user."
 msgstr "Não é possível criar um usuário em branco."
+>>>>>>> master
 
 #: wp-admin/network/sites.php:107 wp-admin/network/sites.php:185
 msgid "Confirm"

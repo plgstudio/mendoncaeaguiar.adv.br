@@ -20,12 +20,15 @@ msgctxt "default GMT offset or timezone string"
 msgid "0"
 msgstr "America/Sao_Paulo"
 
+<<<<<<< HEAD
+=======
 #. translators: default start of the week. 0 = Sunday, 1 = Monday
 #: wp-admin/includes/schema.php:402
 msgctxt "start of week"
 msgid "1"
 msgstr "0"
 
+>>>>>>> master
 #: wp-admin/customize.php:80
 msgid "This changeset cannot be further modified."
 msgstr "Este conjunto de alterações não pode mais ser modificado."
@@ -769,10 +772,17 @@ msgstr "https://br.wordpress.org/plugins/"
 msgid "Customize New Changes"
 msgstr "Personalizar novas mudanças"
 
+<<<<<<< HEAD
+#: wp-admin/custom-background.php:391
+msgctxt "Original Size"
+msgid "Original"
+msgstr "Original"
+=======
 #: wp-admin/custom-background.php:407 wp-admin/custom-background.php:408
 msgctxt "Background Scroll"
 msgid "Scroll"
 msgstr "Rolar"
+>>>>>>> master
 
 #: wp-admin/custom-background.php:399 wp-admin/custom-background.php:400
 msgctxt "Background Repeat"
@@ -2822,6 +2832,26 @@ msgstr "Atualmente você está editando a página que exibe seus posts mais rece
 msgid "Close details dialog"
 msgstr "Fechar janela de informações"
 
+#: wp-admin/nav-menus.php:547
+msgid "To add a custom link, <strong>expand the Custom Links section, enter a URL and link text, and click Add to Menu</strong>"
+msgstr "Para adicionar um link personalizado, <strong>abra a seção Links Personalizados, insira um URL e o texto do link e clique em Adicionar ao menu</strong>"
+
+#: wp-admin/includes/template.php:1760
+msgid "Front Page"
+msgstr "Página principal"
+
+#: wp-admin/update-core.php:431
+msgid "New translations are available."
+msgstr "Novas traduções estão disponíveis."
+
+#: wp-admin/theme-install.php:332
+msgid "This theme has not been rated yet."
+msgstr "Este tema não foi avaliado ainda."
+
+#: wp-admin/includes/class-wp-screen.php:1125
+msgid "Number of items per page:"
+msgstr "Número de itens por página:"
+
 #. translators: Do not translate USERNAME, URL_DELETE, SITE_NAME: those are
 #. placeholders.
 #: wp-admin/ms-delete-site.php:48
@@ -2859,6 +2889,11 @@ msgstr ""
 "Webmaster\n"
 "###SITE_NAME###"
 
+<<<<<<< HEAD
+#: wp-admin/user-edit.php:49
+msgid "You can log out of other devices, such as your phone or a public computer, by clicking the Log Out Everywhere Else button."
+msgstr "Você pode fazer logout de outros dispositivos, como seu telefone ou um computador público, clicando no botão Fazer logout em todas as outras sessões."
+=======
 #: wp-admin/nav-menus.php:547
 msgid "To add a custom link, <strong>expand the Custom Links section, enter a URL and link text, and click Add to Menu</strong>"
 msgstr "Para adicionar um link personalizado, <strong>abra a seção Links Personalizados, insira um URL e o texto do link e clique em Adicionar ao menu</strong>"
@@ -2885,6 +2920,7 @@ msgstr "Este tema não foi avaliado ainda."
 #: wp-admin/includes/template.php:1760
 msgid "Front Page"
 msgstr "Página principal"
+>>>>>>> master
 
 #: wp-admin/includes/revision.php:208 wp-admin/includes/revision.php:250
 msgctxt "revision date short format"
@@ -6044,9 +6080,16 @@ msgstr "Use as seguintes opções e organize o Painel do seu jeito. Isto é poss
 msgid "<strong>Drag and Drop</strong> &mdash; To rearrange the boxes, drag and drop by clicking on the title bar of the selected box and releasing when you see a gray dotted-line rectangle appear in the location you want to place the box."
 msgstr "<strong>Arraste e solte</strong> &mdash; Para reorganizar as caixas, arraste e solte clicando na barra de título da caixa selecionada e solte quando você ver um retângulo tracejado cinza no local onde você deseja que ela se encaixe."
 
+<<<<<<< HEAD
+#: wp-admin/my-sites.php:54 wp-admin/options-head.php:15
+#: wp-admin/options.php:235
+msgid "Settings saved."
+msgstr "Configurações salvas."
+=======
 #: wp-admin/index.php:50
 msgid "Navigation"
 msgstr "Navegação"
+>>>>>>> master
 
 #: wp-admin/index.php:45
 msgid "The left-hand navigation menu provides links to all of the WordPress administration screens, with submenu items displayed on hover. You can minimize this menu to a narrow icon strip by clicking on the Collapse Menu arrow at the bottom."
@@ -6722,6 +6765,11 @@ msgstr "%1$s &#8212; WordPress"
 msgid "This screen allows you to edit five fields for metadata in a file within the media library."
 msgstr "Esta tela permite que você edite cinco campos de metadados em um arquivo dentro da biblioteca de mídia."
 
+<<<<<<< HEAD
+#: wp-admin/widgets.php:56
+msgid "The Available Widgets section contains all the widgets you can choose from. Once you drag a widget into a sidebar, it will open to allow you to configure its settings. When you are happy with the widget settings, click the Save button and the widget will go live on your site. If you click Delete, it will remove the widget."
+msgstr "A seção Widgets Disponíveis contém todos os widgets que você pode escolher. Quando você arrasta um widget para uma barra lateral, ele será aberto para permitir que você altere suas configurações. Quando estiver satisfeito com as configurações do widget, clique no botão Salvar e o widget aparecerá em seu site. Se você clicar em Excluir, removerá o widget."
+=======
 #: wp-admin/edit-form-advanced.php:417 wp-admin/media.php:76
 msgid "For images only, you can click on Edit Image under the thumbnail to expand out an inline image editor with icons for cropping, rotating, or flipping the image as well as for undoing and redoing. The boxes on the right give you more options for scaling the image, for cropping it, and for cropping the thumbnail in a different way than you crop the original image. You can click on Help in those boxes to get more information."
 msgstr "Apenas para imagens, você pode clicar em Editar Imagem sob a miniatura para expandir um editor de imagens em linha, com ícones para recortar, girar, ou virar a imagem e também para fazer e desfazer ações. As caixas à direita, fornecem mais opções para redimensionar a imagem, para recortá-la e para recortar a miniatura de forma diferente da imagem original. Você pode clicar em Ajuda nestas caixas para obter mais informações."
@@ -6729,14 +6777,21 @@ msgstr "Apenas para imagens, você pode clicar em Editar Imagem sob a miniatura 
 #: wp-admin/edit-form-advanced.php:418 wp-admin/media.php:77
 msgid "Note that you crop the image by clicking on it (the Crop icon is already selected) and dragging the cropping frame to select the desired part. Then click Save to retain the cropping."
 msgstr "Observe que você recorta a imagem clicando nela (o ícone Recortar já está selecionado) e arrastando a área de recorte para a parte desejada. Depois clique em salvar para confirmar."
+>>>>>>> master
 
 #: wp-admin/edit-form-advanced.php:419 wp-admin/media.php:78
 msgid "Remember to click Update Media to save metadata entered or changed."
 msgstr "Lembre-se de clicar em Atualizar Mídia para salvar os metadados inseridos ou alterados."
 
+<<<<<<< HEAD
+#: wp-admin/edit-form-advanced.php:417 wp-admin/media.php:76
+msgid "For images only, you can click on Edit Image under the thumbnail to expand out an inline image editor with icons for cropping, rotating, or flipping the image as well as for undoing and redoing. The boxes on the right give you more options for scaling the image, for cropping it, and for cropping the thumbnail in a different way than you crop the original image. You can click on Help in those boxes to get more information."
+msgstr "Apenas para imagens, você pode clicar em Editar Imagem sob a miniatura para expandir um editor de imagens em linha, com ícones para recortar, girar, ou virar a imagem e também para fazer e desfazer ações. As caixas à direita, fornecem mais opções para redimensionar a imagem, para recortá-la e para recortar a miniatura de forma diferente da imagem original. Você pode clicar em Ajuda nestas caixas para obter mais informações."
+=======
 #: wp-admin/widgets.php:56
 msgid "The Available Widgets section contains all the widgets you can choose from. Once you drag a widget into a sidebar, it will open to allow you to configure its settings. When you are happy with the widget settings, click the Save button and the widget will go live on your site. If you click Delete, it will remove the widget."
 msgstr "A seção Widgets Disponíveis contém todos os widgets que você pode escolher. Quando você arrasta um widget para uma barra lateral, ele será aberto para permitir que você altere suas configurações. Quando estiver satisfeito com as configurações do widget, clique no botão Salvar e o widget aparecerá em seu site. Se você clicar em Excluir, removerá o widget."
+>>>>>>> master
 
 #: wp-admin/user-new.php:335
 msgid "Email or Username"
@@ -8892,9 +8947,15 @@ msgstr "<strong>ERRO</strong>: Digite um endereço de e-mail."
 msgid "<strong>ERROR</strong>: Please enter the same password in both password fields."
 msgstr "<strong>ERRO</strong>: Digite a mesma senha nos dois campos."
 
+<<<<<<< HEAD
+#: wp-admin/options.php:249
+msgid "All Settings"
+msgstr "Todas configurações"
+=======
 #: wp-admin/includes/user.php:149
 msgid "<strong>ERROR</strong>: Passwords may not contain the character \"\\\"."
 msgstr "<strong>ERRO</strong>: As senhas não podem ter o caractere \"\\\"."
+>>>>>>> master
 
 #: wp-admin/includes/user.php:144
 msgid "<strong>ERROR</strong>: Please enter a password."
@@ -10504,9 +10565,16 @@ msgstr "Este formato, ao qual chamamos WordPress eXtended RSS ou WXR, irá conte
 msgid "When you click the button below WordPress will create an XML file for you to save to your computer."
 msgstr "Quando você clicar no botão abaixo, o WordPress irá criar um arquivo XML para você salvar em seu computador."
 
+<<<<<<< HEAD
+#: wp-admin/includes/template.php:1994 wp-admin/nav-menus.php:659
+#: wp-admin/options.php:296
+msgid "Save Changes"
+msgstr "Salvar alterações"
+=======
 #: wp-admin/export.php:17 wp-admin/menu.php:246
 msgid "Export"
 msgstr "Exportar"
+>>>>>>> master
 
 #: wp-admin/includes/class-wp-list-table.php:152
 #: wp-admin/includes/class-wp-screen.php:1221
