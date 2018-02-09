@@ -96,7 +96,7 @@ class ElementorWidget extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_form_settings',
 			array(
-				'label' => __( 'Form Settings', 'textdomain' ),
+				'label' => __( 'Form Settings', 'themeisle-companion' ),
 			)
 		);
 
@@ -127,7 +127,7 @@ class ElementorWidget extends \Elementor\Widget_Base {
 
 		$this->start_controls_section(
 			$this->form_type . '_form_fields',
-			array( 'label' => __( 'Fields', 'textdomain' ) )
+			array( 'label' => __( 'Fields', 'themeisle-companion' ) )
 		);
 
 		$repeater = new \Elementor\Repeater();
@@ -135,7 +135,7 @@ class ElementorWidget extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'label',
 			array(
-				'label'   => __( 'Label', 'textdomain' ),
+				'label'   => __( 'Label', 'themeisle-companion' ),
 				'type'    => \Elementor\Controls_Manager::TEXT,
 				'default' => '',
 			)
@@ -144,7 +144,7 @@ class ElementorWidget extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'placeholder',
 			array(
-				'label'   => __( 'Placeholder', 'textdomain' ),
+				'label'   => __( 'Placeholder', 'themeisle-companion' ),
 				'type'    => \Elementor\Controls_Manager::TEXT,
 				'default' => '',
 			)
@@ -153,22 +153,22 @@ class ElementorWidget extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'requirement',
 			array(
-				'label'   => __( 'Requirement', 'textdomain' ),
+				'label'   => __( 'Requirement', 'themeisle-companion' ),
 				'type'    => \Elementor\Controls_Manager::SELECT,
 				'options' => array(
-					'required' => esc_html__( 'Required' ),
-					'optional' => esc_html__( 'Optional' )
+					'required' => esc_html__( 'Required', 'themeisle-companion' ),
+					'optional' => esc_html__( 'Optional', 'themeisle-companion' )
 				),
 				'default' => 'optional',
 			)
 		);
 
 		$field_types = array(
-			'text'     => __( 'Text', 'textdomain' ),
-			'password' => __( 'Password', 'textdomain' ),
+			'text'     => __( 'Text', 'themeisle-companion' ),
+			'password' => __( 'Password', 'themeisle-companion' ),
 //			'tel'      => __( 'Tel', 'textdomain' ),
-			'email'    => __( 'Email', 'textdomain' ),
-			'textarea' => __( 'Textarea', 'textdomain' ),
+			'email'    => __( 'Email', 'themeisle-companion' ),
+			'textarea' => __( 'Textarea', 'themeisle-companion' ),
 //			'number'   => __( 'Number', 'textdomain' ),
 //			'select'   => __( 'Select', 'textdomain' ),
 //			'url'      => __( 'URL', 'textdomain' ),
@@ -177,7 +177,7 @@ class ElementorWidget extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'type',
 			array(
-				'label'   => __( 'Type', 'textdomain' ),
+				'label'   => __( 'Type', 'themeisle-companion' ),
 				'type'    => \Elementor\Controls_Manager::SELECT,
 				'options' => $field_types,
 				'default' => 'text'
@@ -187,7 +187,7 @@ class ElementorWidget extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'key',
 			array(
-				'label' => __( 'Key', 'textdomain' ),
+				'label' => __( 'Key', 'themeisle-companion' ),
 				'type'  => \Elementor\Controls_Manager::HIDDEN
 			)
 		);
@@ -210,7 +210,7 @@ class ElementorWidget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'form_fields',
 			array(
-				'label'       => __( 'Form Fields', 'textdomain' ),
+				'label'       => __( 'Form Fields', 'themeisle-companion' ),
 				'type'        => \Elementor\Controls_Manager::REPEATER,
 				'show_label'  => false,
 				'separator'   => 'before',
@@ -255,7 +255,7 @@ class ElementorWidget extends \Elementor\Widget_Base {
 				<div class="content-forms-required">
 					<?php
 					printf(
-						esc_html__( 'The %s setting is required!', 'textdomain' ),
+						esc_html__( 'The %s setting is required!', 'themeisle-companion' ),
 						'<strong>' . $control['label'] . '</strong>'
 					); ?>
 				</div>
@@ -269,7 +269,7 @@ class ElementorWidget extends \Elementor\Widget_Base {
 			$this->render_form_field( $field );
 		}
 
-		$btn_label = esc_html__( 'Submit', 'textdomain' );
+		$btn_label = esc_html__( 'Submit', 'themeisle-companion' );
 
 		if ( ! empty( $controls['submit_label'] ) ) {
 			$btn_label = $this->get_settings( 'submit_label' );
@@ -305,7 +305,6 @@ class ElementorWidget extends \Elementor\Widget_Base {
 	 * Display method for the form's header
 	 * It is also takes care about the form attributes and the regular hidden fields
 	 *
-	 * @param $type
 	 * @param $id
 	 */
 	private function render_form_header( $id ) {
@@ -482,7 +481,9 @@ class ElementorWidget extends \Elementor\Widget_Base {
 	 * @return array
 	 */
 	public function get_categories() {
-		return array( 'obfx-elementor-widgets' );
+		$category_args = apply_filters( 'content_forms_category_args', array() );
+		$slug = isset( $category_args['slug'] ) ?  $category_args['slug'] : 'obfx-elementor-widgets';
+		return [ $slug ];
 	}
 
 	/**

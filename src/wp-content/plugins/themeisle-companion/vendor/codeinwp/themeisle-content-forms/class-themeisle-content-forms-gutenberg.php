@@ -95,7 +95,7 @@ class GutenbergModule {
 		$form_footer = $this->render_form_footer();
 
 
-		$btn_label = esc_html__( 'Submit', 'textdomain' );
+		$btn_label = esc_html__( 'Submit', 'themeisle-companion' );
 		ob_start();
 		if ( ! empty( $attributes['submit_label'] ) ) {
 			$btn_label = $attributes['submit_label'];

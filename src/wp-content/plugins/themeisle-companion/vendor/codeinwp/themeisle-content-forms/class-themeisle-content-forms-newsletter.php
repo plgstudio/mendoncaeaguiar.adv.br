@@ -22,8 +22,8 @@ class NewsletterForm extends Base {
 		$this->set_type( 'newsletter' );
 
 		$this->notices = array(
-			'success' => esc_html__( 'Welcome to our newsletter!', 'textdomain' ),
-			'error'   => esc_html__( 'Action failed!', 'textdomain' ),
+			'success' => esc_html__( 'Welcome to our newsletter!', 'themeisle-companion' ),
+			'error'   => esc_html__( 'Action failed!', 'themeisle-companion' ),
 		);
 	}
 
@@ -38,43 +38,43 @@ class NewsletterForm extends Base {
 		return array(
 			'id'                           => 'newsletter',
 			'icon'                         => 'eicon-align-left',
-			'title'                        => esc_html__( 'Newsletter Form' ),
+			'title'                        => esc_html__( 'Newsletter Form', 'themeisle-companion' ),
 
 			'controls' => array(
 				'provider'     => array(
 					'type'        => 'select',
-					'label'       => esc_html__( 'Subscribe to', 'textdomain' ),
-					'description' => esc_html__( 'Where to send the email?', 'textdomain' ),
+					'label'       => esc_html__( 'Subscribe to', 'themeisle-companion' ),
+					'description' => esc_html__( 'Where to send the email?', 'themeisle-companion' ),
 					'options'     => array(
-						'mailchimp'  => esc_html__( 'MailChimp', 'textdomain' ),
-						'sendinblue' => esc_html__( 'Sendinblue ', 'textdomain' )
+						'mailchimp'  => esc_html__( 'MailChimp', 'themeisle-companion' ),
+						'sendinblue' => esc_html__( 'Sendinblue ', 'themeisle-companion' )
 					)
 				),
 				'access_key'   => array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Access Key', 'textdomain' ),
-					'description' => esc_html__( 'Provide an access key for the selected service', 'textdomain' ),
+					'label'       => esc_html__( 'Access Key', 'themeisle-companion' ),
+					'description' => esc_html__( 'Provide an access key for the selected service', 'themeisle-companion' ),
 					'required' => true
 				),
 				'list_id'      => array(
 					'type'  => 'text',
-					'label' => esc_html__( 'List ID', 'textdomain' ),
-					'description' => esc_html__( 'The List ID (based on the seleced service) where we should subscribe the user', 'textdomain' ),
+					'label' => esc_html__( 'List ID', 'themeisle-companion' ),
+					'description' => esc_html__( 'The List ID (based on the seleced service) where we should subscribe the user', 'themeisle-companion' ),
 					'required' => true
 				),
 				'submit_label' => array(
 					'type'    => 'text',
-					'label'   => esc_html__( 'Submit Label', 'textdomain' ),
-					'default' => esc_html__( 'Join Newsletter', 'textdomain' ),
+					'label'   => esc_html__( 'Submit Label', 'themeisle-companion' ),
+					'default' => esc_html__( 'Join Newsletter', 'themeisle-companion' ),
 				)
 			),
 
 			'fields' => array(
 				'email' => array(
 					'type'        => 'email',
-					'label'       => esc_html__( 'Email', 'textdomain' ),
-					'default'     => esc_html__( 'Email', 'textdomain' ),
-					'placeholder' => esc_html__( 'Email', 'textdomain' ),
+					'label'       => esc_html__( 'Email', 'themeisle-companion' ),
+					'default'     => esc_html__( 'Email', 'themeisle-companion' ),
+					'placeholder' => esc_html__( 'Email', 'themeisle-companion' ),
 					'require'     => 'required'
 				)
 			),
@@ -96,7 +96,7 @@ class NewsletterForm extends Base {
 	public function rest_submit_form( $return, $data, $widget_id, $post_id, $builder ) {
 
 		if ( empty( $data['email'] ) || ! is_email( $data['email'] ) ) {
-			$return['msg'] = esc_html__( 'Invalid email.', 'textdomain' );
+			$return['msg'] = esc_html__( 'Invalid email.', 'themeisle-companion' );
 
 			return $return;
 		}
@@ -115,7 +115,7 @@ class NewsletterForm extends Base {
 		$providerArgs = array();
 
 		if ( empty( $settings['access_key'] ) || empty( $settings['list_id'] ) ) {
-			$return['msg'] = esc_html__( 'Wrong email configuration! Please contact administration!', 'textdomain' );
+			$return['msg'] = esc_html__( 'Wrong email configuration! Please contact administration!', 'themeisle-companion' );
 
 			return $return;
 		}
@@ -253,7 +253,7 @@ class NewsletterForm extends Base {
 	 */
 	public function __clone() {
 		// Cloning instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'themeisle-companion' ), '1.0.0' );
 	}
 
 	/**
@@ -265,6 +265,6 @@ class NewsletterForm extends Base {
 	 */
 	public function __wakeup() {
 		// Unserializing instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'themeisle-companion' ), '1.0.0' );
 	}
 }

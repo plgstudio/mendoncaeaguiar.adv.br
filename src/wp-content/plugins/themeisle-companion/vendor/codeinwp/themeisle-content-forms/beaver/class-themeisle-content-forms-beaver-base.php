@@ -70,12 +70,12 @@ abstract class BeaverModule extends \FLBuilderModule {
 		foreach ( $this->forms_config as $key => $val ) {
 			if ( 'fields' === $key ) {
 				$args['general']['sections']['settings'] = array(
-					'title'  => esc_html__( 'Fields', 'textdomain' ),
+					'title'  => esc_html__( 'Fields', 'themeisle-companion' ),
 					'fields' => array(
 						'fields' => array(
 							'multiple'     => true,
 							'type'         => 'form',
-							'label'        => esc_html__( 'Field', 'textdomain' ),
+							'label'        => esc_html__( 'Field', 'themeisle-companion' ),
 							'form'         => 'field',
 							'preview_text' => 'label',
 							'default'      => $fields
@@ -85,7 +85,7 @@ abstract class BeaverModule extends \FLBuilderModule {
 				continue;
 			} elseif ( 'controls' === $key ) {
 				$args['general']['sections']['controls'] = array(
-					'title'  => esc_html__( 'Form Settings', 'textdomain' ),
+					'title'  => esc_html__( 'Form Settings', 'themeisle-companion' ),
 					'fields' => $controls
 				);
 			}
@@ -95,34 +95,34 @@ abstract class BeaverModule extends \FLBuilderModule {
 
 		\FLBuilder::register_settings_form(
 			'field', array(
-				'title' => esc_html__( 'Field', 'textdomain' ),
+				'title' => esc_html__( 'Field', 'themeisle-companion' ),
 				'tabs'  => array(
 					'general' => array(
-						'title'    => esc_html__( 'Field', 'textdomain' ),
+						'title'    => esc_html__( 'Field', 'themeisle-companion' ),
 						'sections' => array(
 							'fields' => array(
-								'title'  => esc_html__( 'Field', 'textdomain' ),
+								'title'  => esc_html__( 'Field', 'themeisle-companion' ),
 								'fields' => array(
 									'label'    => array(
 										'type'  => 'text',
-										'label' => esc_html__( 'Label', 'textdomain' ),
+										'label' => esc_html__( 'Label', 'themeisle-companion' ),
 									),
 									'type'     => array(
 										'type'    => 'select',
-										'label'   => esc_html__( 'Type', 'textdomain' ),
+										'label'   => esc_html__( 'Type', 'themeisle-companion' ),
 										'options' => array(
-											'text'     => esc_html__( 'Text' ),
-											'text'     => esc_html__( 'Email' ),
-											'textarea' => esc_html__( 'Textarea', 'textdomain' ),
-											'password' => esc_html__( 'Password', 'textdomain' ),
+											'text'     => esc_html__( 'Text', 'themeisle-companion' ),
+											'text'     => esc_html__( 'Email', 'themeisle-companion' ),
+											'textarea' => esc_html__( 'Textarea', 'themeisle-companion' ),
+											'password' => esc_html__( 'Password', 'themeisle-companion' ),
 										)
 									),
 									'required' => array(
 										'type'    => 'select',
-										'label'   => esc_html__( 'Is required?', 'textdomain' ),
+										'label'   => esc_html__( 'Is required?', 'themeisle-companion' ),
 										'options' => array(
-											'required' => esc_html__( 'Required', 'textdomain' ),
-											'optional' => esc_html__( 'Optional', 'textdomain' )
+											'required' => esc_html__( 'Required', 'themeisle-companion' ),
+											'optional' => esc_html__( 'Optional', 'themeisle-companion' )
 										)
 									)
 								),

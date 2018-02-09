@@ -89,10 +89,10 @@ Activating the Orbit Fox Companion plugin is just like any other plugin. If you'
 5. Social Sharing Module
 
 ## Changelog ##
-### 2.3.3 - 2018-01-29  ###
+### 2.3.4 - 2018-02-08  ###
 
-* Allow HTML tags in Hestia customizer settings;
-* Add alt text for images in Hestia sections;
+* Enhancements for Hestia Theme 
+* Made structure more modular
 
 
 ### 2.3.1 - 2018-01-17  ###

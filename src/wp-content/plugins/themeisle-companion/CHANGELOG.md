@@ -1,8 +1,8 @@
 
- ### v2.3.3 - 2018-01-29 
+ ### v2.3.4 - 2018-02-08 
  **Changes:** 
- * Allow HTML tags in Hestia customizer settings;
-* Add alt text for images in Hestia sections;
+ * Enhancements for Hestia Theme 
+* Made structure more modular
  
  ### v2.3.1 - 2018-01-17 
  **Changes:** 

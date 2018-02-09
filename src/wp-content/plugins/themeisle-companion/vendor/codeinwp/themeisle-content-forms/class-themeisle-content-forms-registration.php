@@ -22,8 +22,8 @@ class RegistrationForm extends Base {
 		$this->set_type( 'registration' );
 
 		$this->notices = array(
-			'success' => esc_html__( 'Your message has been sent!', 'textdomain' ),
-			'error'   => esc_html__( 'We failed to send your message!', 'textdomain' ),
+			'success' => esc_html__( 'Your message has been sent!', 'themeisle-companion' ),
+			'error'   => esc_html__( 'We failed to send your message!', 'themeisle-companion' ),
 		);
 	}
 
@@ -39,29 +39,29 @@ class RegistrationForm extends Base {
 		return array(
 			'id'    => $this->get_type(),
 			'icon'  => 'eicon-align-left',
-			'title' => esc_html__( 'User Registration Form' ),
+			'title' => esc_html__( 'User Registration Form', 'themeisle-companion' ),
 
 			'fields' => array(
 				'username' => array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'User Name', 'textdomain' ),
-					'default'     => esc_html__( 'User Name', 'textdomain' ),
-					'placeholder' => esc_html__( 'User Name', 'textdomain' ),
+					'label'       => esc_html__( 'User Name', 'themeisle-companion' ),
+					'default'     => esc_html__( 'User Name', 'themeisle-companion' ),
+					'placeholder' => esc_html__( 'User Name', 'themeisle-companion' ),
 					'require'     => 'required',
 					'validation'  => ''// name a function which should allow only letters and numbers
 				),
 				'email'    => array(
 					'type'        => 'email',
-					'label'       => esc_html__( 'Email', 'textdomain' ),
-					'default'     => esc_html__( 'Email', 'textdomain' ),
-					'placeholder' => esc_html__( 'Email', 'textdomain' ),
+					'label'       => esc_html__( 'Email', 'themeisle-companion' ),
+					'default'     => esc_html__( 'Email', 'themeisle-companion' ),
+					'placeholder' => esc_html__( 'Email', 'themeisle-companion' ),
 					'require'     => 'required'
 				),
 				'password' => array(
 					'type'        => 'password',
-					'label'       => esc_html__( 'Password', 'textdomain' ),
-					'default'     => esc_html__( 'Password', 'textdomain' ),
-					'placeholder' => esc_html__( 'Password', 'textdomain' ),
+					'label'       => esc_html__( 'Password', 'themeisle-companion' ),
+					'default'     => esc_html__( 'Password', 'themeisle-companion' ),
+					'placeholder' => esc_html__( 'Password', 'themeisle-companion' ),
 					'require'     => 'required'
 				)
 			),
@@ -69,9 +69,9 @@ class RegistrationForm extends Base {
 			'controls' => array(
 				'submit_label' => array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Submit', 'textdomain' ),
-					'default'     => esc_html__( 'Register', 'textdomain' ),
-					'description' => esc_html__( 'The Call To Action label', 'textdomain' )
+					'label'       => esc_html__( 'Submit', 'themeisle-companion' ),
+					'default'     => esc_html__( 'Register', 'themeisle-companion' ),
+					'description' => esc_html__( 'The Call To Action label', 'themeisle-companion' )
 				)
 			)
 		);
@@ -92,7 +92,7 @@ class RegistrationForm extends Base {
 	public function rest_submit_form( $return, $data, $widget_id, $post_id, $builder ) {
 
 		if ( empty( $data['email'] ) || ! is_email( $data['email'] ) ) {
-			$return['msg'] = esc_html__( 'Invalid email.', 'textdomain' );
+			$return['msg'] = esc_html__( 'Invalid email.', 'themeisle-companion' );
 
 			return $return;
 		}
@@ -136,25 +136,25 @@ class RegistrationForm extends Base {
 	private function _register_user( $return, $user_email, $user_name, $password = null, $extra_data = array() ) {
 
 		if ( ! get_option( 'users_can_register' ) ) {
-			$return['msg'] = esc_html__( 'This website does not allow registrations at this moment!' );
+			$return['msg'] = esc_html__( 'This website does not allow registrations at this moment!', 'themeisle-companion' );
 
 			return $return;
 		}
 
 		if ( ! validate_username( $user_name ) ) {
-			$return['msg'] = esc_html__( 'Invalid user name' );
+			$return['msg'] = esc_html__( 'Invalid user name', 'themeisle-companion' );
 
 			return $return;
 		}
 
 		if ( username_exists( $user_name ) ) {
-			$return['msg'] = esc_html__( 'Username already exists' );
+			$return['msg'] = esc_html__( 'Username already exists', 'themeisle-companion' );
 
 			return $return;
 		}
 
 		if ( email_exists( $user_email ) ) {
-			$return['msg'] = esc_html__( 'This email is already registered' );
+			$return['msg'] = esc_html__( 'This email is already registered', 'themeisle-companion' );
 			return $return;
 		}
 
@@ -183,7 +183,7 @@ class RegistrationForm extends Base {
 			}
 
 			$return['success'] = true;
-			$return['msg']     = esc_html__( 'Welcome, ', 'textdomain' ) . $user_name;
+			$return['msg']     = esc_html__( 'Welcome, ', 'themeisle-companion' ) . $user_name;
 		}
 
 		return $return;
@@ -217,7 +217,7 @@ class RegistrationForm extends Base {
 	 */
 	public function __clone() {
 		// Cloning instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'themeisle-companion' ), '1.0.0' );
 	}
 
 	/**
@@ -229,6 +229,6 @@ class RegistrationForm extends Base {
 	 */
 	public function __wakeup() {
 		// Unserializing instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'themeisle-companion' ), '1.0.0' );
 	}
 }

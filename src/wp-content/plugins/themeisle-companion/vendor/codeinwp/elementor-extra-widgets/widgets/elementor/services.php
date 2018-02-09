@@ -1,25 +1,24 @@
 <?php
 /**
- * Orbit Fox Elementor Services Widget
+ * Services widget for Elementor builder
  *
  * @link       https://themeisle.com
  * @since      1.0.0
  *
- * @package    Elementor_Widgets_OBFX_Module
+ * @package    ThemeIsle\ElementorExtraWidgets
  */
-
-namespace Elementor;
+namespace ThemeIsle\ElementorExtraWidgets;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // End if().
 
 /**
- * Class OBFX_Elementor_Widget_Services
+ * Class Services
  *
- * @package Elementor_Widgets_OBFX_Module
+ * @package ThemeIsle\ElementorExtraWidgets
  */
-class OBFX_Elementor_Widget_Services extends Widget_Base {
+class Services extends \Elementor\Widget_Base {
 
 	/**
 	 * Widget name.
@@ -55,7 +54,9 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 	 * @return array
 	 */
 	public function get_categories() {
-		return [ 'obfx-elementor-widgets' ];
+		$category_args = apply_filters( 'elementor_extra_widgets_category_args', array() );
+		$slug = isset( $category_args['slug'] ) ?  $category_args['slug'] : 'obfx-elementor-widgets';
+		return [ $slug ];
 	}
 
 	/**
@@ -82,7 +83,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'services_list',
 			[
 				'label'       => __( 'Services', 'themeisle-companion' ),
-				'type'        => Controls_Manager::REPEATER,
+				'type'        => \Elementor\Controls_Manager::REPEATER,
 				'default'     => [
 					[
 						'title' => __( 'Award-Winning​', 'themeisle-companion' ),
@@ -108,7 +109,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 				],
 				'fields'      => [
 					[
-						'type'    => Controls_Manager::CHOOSE,
+						'type'    => \Elementor\Controls_Manager::CHOOSE,
 						'name'    => 'type',
 						'label_block' => true,
 						'label'   => __( 'Type', 'themeisle-companion' ),
@@ -125,20 +126,20 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 						],
 					],
 					[
-						'type'    => Controls_Manager::TEXT,
+						'type'    => \Elementor\Controls_Manager::TEXT,
 						'name'    => 'title',
 						'label_block' => true,
 						'label'   => __( 'Title & Description', 'themeisle-companion' ),
 						'default' => __( 'Service Title', 'themeisle-companion' ),
 					],
 					[
-						'type'        => Controls_Manager::TEXTAREA,
+						'type'        => \Elementor\Controls_Manager::TEXTAREA,
 						'name'        => 'text',
 						'placeholder' => __( 'Plan Features', 'themeisle-companion' ),
 						'default'     => __( 'Feature', 'themeisle-companion' ),
 					],
 					[
-						'type'    => Controls_Manager::ICON,
+						'type'    => \Elementor\Controls_Manager::ICON,
 						'name'    => 'icon',
 						'label'   => __( 'Icon', 'themeisle-companion' ),
 						'default' => 'fa fa-diamond',
@@ -147,7 +148,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 						],
 					],
 					[
-						'type'        => Controls_Manager::COLOR,
+						'type'        => \Elementor\Controls_Manager::COLOR,
 						'name'        => 'color',
 						'label_block' => false,
 						'label'       => __( 'Icon Color', 'themeisle-companion' ),
@@ -157,7 +158,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 						],
 					],
 					[
-						'type'    => Controls_Manager::MEDIA,
+						'type'    => \Elementor\Controls_Manager::MEDIA,
 						'name'    => 'image',
 						'label'   => __( 'Image', 'themeisle-companion' ),
 						'condition' => [
@@ -165,7 +166,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 						],
 					],
 					[
-						'type'        => Controls_Manager::URL,
+						'type'        => \Elementor\Controls_Manager::URL,
 						'name'        => 'link',
 						'label'       => __( 'Link to', 'themeisle-companion' ),
 						'separator' => 'before',
@@ -180,7 +181,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'align',
 			[
 				'label'     => '<i class="fa fa-arrows"></i> ' . __( 'Icon Position', 'themeisle-companion' ),
-				'type'      => Controls_Manager::CHOOSE,
+				'type'      => \Elementor\Controls_Manager::CHOOSE,
 				'options'   => [
 					'left'   => [
 						'title' => __( 'Left', 'themeisle-companion' ),
@@ -205,7 +206,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 		$this->add_responsive_control(
 			'grid_columns',
 			[
-				'type'           => Controls_Manager::SELECT,
+				'type'           => \Elementor\Controls_Manager::SELECT,
 				'label'          => '<i class="fa fa-columns"></i> ' . __( 'Columns', 'themeisle-companion' ),
 				'default'        => 3,
 				'tablet_default' => 2,
@@ -230,14 +231,14 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'section_style_icon',
 			[
 				'label' => __( 'Icon / Image', 'themeisle-companion' ),
-				'tab'   => Controls_Manager::TAB_STYLE,
+				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'icon_space',
 			[
 				'label' => __( 'Spacing', 'themeisle-companion' ),
-				'type' => Controls_Manager::SLIDER,
+				'type' => \Elementor\Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 15,
 				],
@@ -258,7 +259,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'icon_size',
 			[
 				'label' => __( 'Size', 'themeisle-companion' ),
-				'type' => Controls_Manager::SLIDER,
+				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
 						'min' => 6,
@@ -279,7 +280,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'section_style_content',
 			[
 				'label' => __( 'Content', 'themeisle-companion' ),
-				'tab'   => Controls_Manager::TAB_STYLE,
+				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
 
@@ -287,7 +288,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'text_align',
 			[
 				'label' => __( 'Alignment', 'themeisle-companion' ),
-				'type' => Controls_Manager::CHOOSE,
+				'type' => \Elementor\Controls_Manager::CHOOSE,
 				'toggle' => false,
 				'default' => 'center',
 				'options' => [
@@ -315,7 +316,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'heading_title',
 			[
 				'label' => __( 'Title', 'themeisle-companion' ),
-				'type' => Controls_Manager::HEADING,
+				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
 		);
@@ -324,7 +325,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'title_bottom_space',
 			[
 				'label' => __( 'Spacing', 'themeisle-companion' ),
-				'type' => Controls_Manager::SLIDER,
+				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
 						'min' => 0,
@@ -341,7 +342,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'title_color',
 			[
 				'label' => __( 'Color', 'themeisle-companion' ),
-				'type' => Controls_Manager::COLOR,
+				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .obfx-service-title' => 'color: {{VALUE}};',
@@ -350,11 +351,11 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(),
+			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'title_typography',
 				'selector' => '{{WRAPPER}} .obfx-service-title',
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
 			]
 		);
 
@@ -362,7 +363,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'heading_description',
 			[
 				'label' => __( 'Description', 'themeisle-companion' ),
-				'type' => Controls_Manager::HEADING,
+				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
 		);
@@ -371,24 +372,24 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'description_color',
 			[
 				'label' => __( 'Color', 'themeisle-companion' ),
-				'type' => Controls_Manager::COLOR,
+				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .obfx-service-text' => 'color: {{VALUE}};',
 				],
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_3,
+					'type' => \Elementor\Scheme_Color::get_type(),
+					'value' => \Elementor\Scheme_Color::COLOR_3,
 				],
 			]
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(),
+			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'description_typography',
 				'selector' => '{{WRAPPER}} .obfx-service-text',
-				'scheme' => Scheme_Typography::TYPOGRAPHY_3,
+				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_3,
 			]
 		);
 
@@ -403,7 +404,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'section_grid_style',
 			[
 				'label' => __( 'Grid', 'themeisle-companion' ),
-				'tab'   => Controls_Manager::TAB_STYLE,
+				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
 
@@ -412,7 +413,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'grid_style_columns_margin',
 			[
 				'label'     => __( 'Columns margin', 'themeisle-companion' ),
-				'type'      => Controls_Manager::SLIDER,
+				'type'      => \Elementor\Controls_Manager::SLIDER,
 				'default'   => [
 					'size' => 15,
 				],
@@ -434,7 +435,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'grid_style_rows_margin',
 			[
 				'label'     => __( 'Rows margin', 'themeisle-companion' ),
-				'type'      => Controls_Manager::SLIDER,
+				'type'      => \Elementor\Controls_Manager::SLIDER,
 				'default'   => [
 					'size' => 30,
 				],
@@ -452,7 +453,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 
 		// Background.
 		$this->add_group_control(
-			Group_Control_Background::get_type(),
+			\Elementor\Group_Control_Background::get_type(),
 			[
 				'name'     => 'grid_style_background',
 				'types'    => [ 'classic', 'gradient' ],
@@ -465,7 +466,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'grid_items_style_heading',
 			[
 				'label'     => __( 'Items', 'themeisle-companion' ),
-				'type'      => Controls_Manager::HEADING,
+				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
 		);
@@ -475,7 +476,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'grid_items_style_padding',
 			[
 				'label'      => __( 'Padding', 'themeisle-companion' ),
-				'type'       => Controls_Manager::DIMENSIONS,
+				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
 					'{{WRAPPER}} .obfx-grid-col' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -488,7 +489,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'grid_items_style_border_radius',
 			[
 				'label'      => __( 'Border Radius', 'themeisle-companion' ),
-				'type'       => Controls_Manager::DIMENSIONS,
+				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
 					'{{WRAPPER}} .obfx-grid-col' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -504,43 +505,43 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 	 * Items Style Controls
 	 */
 	private function items_style_tabs() {
-			$this->start_controls_tabs( 'tabs_background' );
+		$this->start_controls_tabs( 'tabs_background' );
 
-			$this->start_controls_tab(
-				'tab_background_normal',
-				[
-					'label' => __( 'Normal', 'themeisle-companion' ),
-				]
-			);
-
-			$this->add_group_control(
-				Group_Control_Background::get_type(),
-				[
-					'name'     => 'grid_items_background',
-					'types'    => [ 'classic', 'gradient' ],
-					'selector' => '{{WRAPPER}} .obfx-service-box',
-				]
-			);
-
-			$this->add_group_control(
-				Group_Control_Box_Shadow::get_type(),
-				[
-					'name'      => 'grid_items_box_shadow',
-					'selector'  => '{{WRAPPER}} .obfx-service-box',
-				]
-			);
-
-			$this->end_controls_tab();
-
-			$this->start_controls_tab(
-				'tab_background_hover',
-				[
-					'label' => __( 'Hover', 'themeisle-companion' ),
-				]
-			);
+		$this->start_controls_tab(
+			'tab_background_normal',
+			[
+				'label' => __( 'Normal', 'themeisle-companion' ),
+			]
+		);
 
 		$this->add_group_control(
-			Group_Control_Background::get_type(),
+			\Elementor\Group_Control_Background::get_type(),
+			[
+				'name'     => 'grid_items_background',
+				'types'    => [ 'classic', 'gradient' ],
+				'selector' => '{{WRAPPER}} .obfx-service-box',
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Box_Shadow::get_type(),
+			[
+				'name'      => 'grid_items_box_shadow',
+				'selector'  => '{{WRAPPER}} .obfx-service-box',
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'tab_background_hover',
+			[
+				'label' => __( 'Hover', 'themeisle-companion' ),
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Background::get_type(),
 			[
 				'name'     => 'grid_items_background_hover',
 				'types'    => [ 'classic', 'gradient' ],
@@ -549,7 +550,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Box_Shadow::get_type(),
+			\Elementor\Group_Control_Box_Shadow::get_type(),
 			[
 				'name'      => 'grid_items_box_shadow_hover',
 				'selector'  => '{{WRAPPER}} .obfx-service-box:hover',
@@ -560,7 +561,7 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 			'hover_transition',
 			[
 				'label'       => __( 'Transition Duration', 'themeisle-companion' ),
-				'type'        => Controls_Manager::SLIDER,
+				'type'        => \Elementor\Controls_Manager::SLIDER,
 				'default'     => [
 					'size' => 0.3,
 				],
@@ -575,9 +576,9 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 				],
 			]
 		);
-			$this->end_controls_tab();
+		$this->end_controls_tab();
 
-			$this->end_controls_tabs();
+		$this->end_controls_tabs();
 	}
 
 	/**
@@ -585,6 +586,8 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 	 */
 	protected function render() {
 		$settings = $this->get_settings();
+
+		$this->maybe_load_widget_style();
 
 		echo '<div class="obfx-grid"><div class="obfx-grid-container' . ( ! empty( $settings['grid_columns_mobile'] ) ? ' obfx-grid-mobile-' . $settings['grid_columns_mobile'] : '' ) . ( ! empty( $settings['grid_columns_tablet'] ) ? ' obfx-grid-tablet-' . $settings['grid_columns_tablet'] : '' ) . ( ! empty( $settings['grid_columns'] ) ? ' obfx-grid-desktop-' . $settings['grid_columns'] : '' ) . '">';
 		foreach ( $settings['services_list'] as $service ) {
@@ -613,43 +616,53 @@ class OBFX_Elementor_Widget_Services extends Widget_Base {
 						$link_props .= ' rel="nofollow" ';
 					}
 					echo '<a' . $link_props . '>';
-				}
-				?>
-			<div class="obfx-service-box obfx-grid-col">
-				<?php
-				if ( $service['type'] === 'icon' && ! empty( $service['icon'] ) ) {
-				?>
-					<span class="obfx-icon-wrap"><i class="obfx-icon <?php echo esc_attr( $service['icon'] ); ?>" style="color: <?php echo esc_attr( $service['color'] ); ?>"></i></span>
+				} ?>
+				<div class="obfx-service-box obfx-grid-col">
 					<?php
-				} elseif ( $service['type'] === 'image' && ! empty( $service['image']['url'] ) ) {
-				?>
-
-					<span class="obfx-image-wrap"><img class="obfx-image" src="<?php echo esc_url( $service['image']['url'] ); ?>"/></span>
-				<?php
-				}
-				if ( ! empty( $service['title'] ) || ! empty( $service['text'] ) ) {
-				?>
-				<div class="obfx-service-box-content">
-					<?php if ( ! empty( $service['title'] ) ) { ?>
-						<h4 class="obfx-service-title"><?php echo esc_attr( $service['title'] ); ?></h4>
-					<?php
-}
-if ( ! empty( $service['text'] ) ) {
-?>
-						<p class="obfx-service-text"><?php echo esc_attr( $service['text'] ); ?></p>
+					if ( $service['type'] === 'icon' && ! empty( $service['icon'] ) ) { ?>
+						<span class="obfx-icon-wrap"><i class="obfx-icon <?php echo esc_attr( $service['icon'] ); ?>" style="color: <?php echo esc_attr( $service['color'] ); ?>"></i></span>
+						<?php
+					} elseif ( $service['type'] === 'image' && ! empty( $service['image']['url'] ) ) { ?>
+						<span class="obfx-image-wrap"><img class="obfx-image" src="<?php echo esc_url( $service['image']['url'] ); ?>"/></span>
+						<?php
+					}
+					if ( ! empty( $service['title'] ) || ! empty( $service['text'] ) ) { ?>
+						<div class="obfx-service-box-content">
+							<?php if ( ! empty( $service['title'] ) ) { ?>
+								<h4 class="obfx-service-title"><?php echo esc_attr( $service['title'] ); ?></h4>
+								<?php
+							}
+							if ( ! empty( $service['text'] ) ) { ?>
+								<p class="obfx-service-text"><?php echo esc_attr( $service['text'] ); ?></p>
+							<?php } ?>
+						</div><!-- /.obfx-service-box-content -->
 					<?php } ?>
-				</div><!-- /.obfx-service-box-content -->
-					<?php } ?>
-			</div><!-- /.obfx-service-box -->
+				</div><!-- /.obfx-service-box -->
 				<?php
 				if ( ! empty( $service['link'] ) ) {
 					echo '</a>';
-				}
-				?>
+				} ?>
 			</div><!-- /.obfx-grid-wrapper -->
-		<?php
+			<?php
 		}// End foreach().
 		echo '</div></div>';
 
+	}
+
+	/**
+	 * Load the widget style dynamically if it is a widget preview
+	 * or enqueue style and scripts if not
+	 *
+	 * This way we are sure that the assets files are loaded only when this block is present in page.
+	 */
+	protected function maybe_load_widget_style() {
+		if ( \Elementor\Plugin::$instance->editor->is_edit_mode() === true && apply_filters( 'themeisle_content_forms_register_default_style', true ) ) { ?>
+			<style>
+				<?php echo file_get_contents( plugin_dir_path( dirname( dirname(__FILE__ ) ) ) . 'css/public.css' ) ?>
+			</style>
+			<?php
+		} else {
+			wp_enqueue_style('eaw-elementor');
+		}
 	}
 }

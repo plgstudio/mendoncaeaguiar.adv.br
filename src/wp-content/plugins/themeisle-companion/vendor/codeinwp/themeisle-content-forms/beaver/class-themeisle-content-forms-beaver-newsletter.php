@@ -16,9 +16,9 @@ class BeaverModuleNewsletter extends BeaverModule {
 
 		parent::__construct(
 			array(
-				'name'        => esc_html__( 'Newsletter', 'textdomain' ),
-				'description' => esc_html__( 'A simple newsletter form.', 'textdomain' ),
-				'category'    => esc_html__( 'OrbitFox Modules', 'textdomain' ),
+				'name'        => esc_html__( 'Newsletter', 'themeisle-companion' ),
+				'description' => esc_html__( 'A simple newsletter form.', 'themeisle-companion' ),
+				'category'    => esc_html__( 'OrbitFox Modules', 'themeisle-companion' ),
 				'dir'         => dirname( __FILE__ ),
 				'url'         => plugin_dir_url( __FILE__ )
 			)

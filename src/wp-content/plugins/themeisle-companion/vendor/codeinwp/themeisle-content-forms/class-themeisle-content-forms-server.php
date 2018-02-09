@@ -39,27 +39,27 @@ class RestServer extends \WP_Rest_Controller {
 					'form_type' => array(
 						'type'        => 'string',
 						'required'    => true,
-						'description' => __( 'What type of form is submitted.', 'textdomain' ),
+						'description' => __( 'What type of form is submitted.', 'themeisle-companion' ),
 					),
 					'nonce'     => array(
 						'type'        => 'string',
 						'required'    => true,
-						'description' => __( 'The security key', 'textdomain' ),
+						'description' => __( 'The security key', 'themeisle-companion' ),
 					),
 					'data'      => array(
 						'type'        => 'json',
 						'required'    => true,
-						'description' => __( 'The form must have data', 'textdomain' ),
+						'description' => __( 'The form must have data', 'themeisle-companion' ),
 					),
 					'form_id'   => array(
 						'type'        => 'string',
 						'required'    => true,
-						'description' => __( 'The form identifier.', 'textdomain' ),
+						'description' => __( 'The form identifier.', 'themeisle-companion' ),
 					),
 					'post_id'   => array(
 						'type'        => 'string',
 						'required'    => true,
-						'description' => __( 'The form identifier.', 'textdomain' ),
+						'description' => __( 'The form identifier.', 'themeisle-companion' ),
 					)
 				),
 			),
@@ -78,7 +78,7 @@ class RestServer extends \WP_Rest_Controller {
 	public function submit_form( $request ) {
 		$return = array(
 			'success' => false,
-			'msg'     => esc_html__( 'Something went wrong', 'textdomain' )
+			'msg'     => esc_html__( 'Something went wrong', 'themeisle-companion' )
 		);
 
 		$nonce   = $request->get_param( 'nonce' );
@@ -95,7 +95,7 @@ class RestServer extends \WP_Rest_Controller {
 		$data         = $request->get_param( 'data' );
 
 		if ( empty( $data[ $form_id ] ) ) {
-			$return['msg'] = esc_html__( 'Invalid Data ', 'textdomain' ) . $form_id;
+			$return['msg'] = esc_html__( 'Invalid Data ', 'themeisle-companion' ) . $form_id;
 			return $return;
 		}
 
@@ -141,7 +141,7 @@ class RestServer extends \WP_Rest_Controller {
 	 */
 	public function __clone() {
 		// Cloning instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'themeisle-companion' ), '1.0.0' );
 	}
 
 	/**
@@ -153,6 +153,6 @@ class RestServer extends \WP_Rest_Controller {
 	 */
 	public function __wakeup() {
 		// Unserializing instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'themeisle-companion' ), '1.0.0' );
 	}
 }

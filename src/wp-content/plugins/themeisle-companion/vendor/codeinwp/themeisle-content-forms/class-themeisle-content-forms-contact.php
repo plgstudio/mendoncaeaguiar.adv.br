@@ -23,8 +23,8 @@ class ContactForm extends Base {
 		$this->set_type( 'contact' );
 
 		$this->notices = array(
-			'success' => esc_html__( 'Your message has been sent!', 'textdomain' ),
-			'error'   => esc_html__( 'We failed to send your message!', 'textdomain' ),
+			'success' => esc_html__( 'Your message has been sent!', 'themeisle-companion' ),
+			'error'   => esc_html__( 'We failed to send your message!', 'themeisle-companion' ),
 		);
 
 	}
@@ -40,34 +40,34 @@ class ContactForm extends Base {
 		return array(
 			'id'                           => 'contact',
 			'icon'                         => 'eicon-align-left',
-			'title'                        => esc_html__( 'Contact Form' ),
+			'title'                        => esc_html__( 'Contact Form', 'themeisle-companion' ),
 			'fields' /* or form_fields? */ => array(
 				'name'    => array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Name' ),
-					'default'     => esc_html__( 'Name' ),
-					'placeholder' => esc_html__( 'Your Name' ),
+					'label'       => esc_html__( 'Name', 'themeisle-companion' ),
+					'default'     => esc_html__( 'Name', 'themeisle-companion' ),
+					'placeholder' => esc_html__( 'Your Name', 'themeisle-companion' ),
 					'require'     => 'required'
 				),
 				'email'   => array(
 					'type'        => 'email',
-					'label'       => esc_html__( 'Email' ),
-					'default'     => esc_html__( 'Email' ),
-					'placeholder' => esc_html__( 'Email address' ),
+					'label'       => esc_html__( 'Email', 'themeisle-companion' ),
+					'default'     => esc_html__( 'Email', 'themeisle-companion' ),
+					'placeholder' => esc_html__( 'Email address', 'themeisle-companion' ),
 					'require'     => 'required'
 				),
 				'phone'   => array(
 					'type'        => 'number',
-					'label'       => esc_html__( 'Phone' ),
-					'default'     => esc_html__( 'Phone' ),
-					'placeholder' => esc_html__( 'Phone Nr' ),
+					'label'       => esc_html__( 'Phone', 'themeisle-companion' ),
+					'default'     => esc_html__( 'Phone', 'themeisle-companion' ),
+					'placeholder' => esc_html__( 'Phone Nr', 'themeisle-companion' ),
 					'require'     => 'optional'
 				),
 				'message' => array(
 					'type'        => 'textarea',
-					'label'       => esc_html__( 'Message' ),
-					'default'     => esc_html__( 'Message' ),
-					'placeholder' => esc_html__( 'Your message' ),
+					'label'       => esc_html__( 'Message', 'themeisle-companion' ),
+					'default'     => esc_html__( 'Message', 'themeisle-companion' ),
+					'placeholder' => esc_html__( 'Your message', 'themeisle-companion' ),
 					'require'     => 'required'
 				)
 			),
@@ -75,15 +75,15 @@ class ContactForm extends Base {
 			'controls' /* or settings? */ => array(
 				'to_send_email' => array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Send to', 'textdomain' ),
-					'description' => esc_html__( 'Where should we send the email?', 'textdomain' ),
+					'label'       => esc_html__( 'Send to', 'themeisle-companion' ),
+					'description' => esc_html__( 'Where should we send the email?', 'themeisle-companion' ),
 					'default'     => get_bloginfo( 'admin_email' )
 				),
 				'submit_label'  => array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Submit', 'textdomain' ),
-					'default'     => esc_html__( 'Submit', 'textdomain' ),
-					'description' => esc_html__( 'The Call To Action label', 'textdomain' )
+					'label'       => esc_html__( 'Submit', 'themeisle-companion' ),
+					'default'     => esc_html__( 'Submit', 'themeisle-companion' ),
+					'description' => esc_html__( 'The Call To Action label', 'themeisle-companion' )
 				)
 			)
 		);
@@ -104,7 +104,7 @@ class ContactForm extends Base {
 	public function rest_submit_form( $return, $data, $widget_id, $post_id, $builder ) {
 
 		if ( empty( $data['email'] ) || ! is_email( $data['email'] ) ) {
-			$return['msg'] = esc_html__( 'Invalid email.', 'textdomain' );
+			$return['msg'] = esc_html__( 'Invalid email.', 'themeisle-companion' );
 
 			return $return;
 		}
@@ -112,7 +112,7 @@ class ContactForm extends Base {
 		$from = $data['email'];
 
 		if ( empty( $data['name'] ) ) {
-			$return['msg'] = esc_html__( 'Missing name.', 'textdomain' );
+			$return['msg'] = esc_html__( 'Missing name.', 'themeisle-companion' );
 
 			return $return;
 		}
@@ -120,7 +120,7 @@ class ContactForm extends Base {
 		$name = $data['name'];
 
 		if ( empty( $data['message'] ) ) {
-			$return['msg'] = esc_html__( 'Missing message.', 'textdomain' );
+			$return['msg'] = esc_html__( 'Missing message.', 'themeisle-companion' );
 
 			return $return;
 		}
@@ -131,7 +131,7 @@ class ContactForm extends Base {
 		$settings = $this->get_widget_settings( $widget_id, $post_id, $builder );
 
 		if ( ! isset( $settings['to_send_email'] ) || ! is_email( $settings['to_send_email'] ) ) {
-			$return['msg'] = esc_html__( 'Wrong email configuration! Please contact administration!', 'textdomain' );
+			$return['msg'] = esc_html__( 'Wrong email configuration! Please contact administration!', 'themeisle-companion' );
 
 			return $return;
 		}
@@ -142,7 +142,7 @@ class ContactForm extends Base {
 			$return['success'] = true;
 			$return['msg']     = $this->notices['success'];
 		} else {
-			$return['msg'] = esc_html__( 'Ops! I cannot send this email!', 'textdomain' );
+			$return['msg'] = esc_html__( 'Ops! I cannot send this email!', 'themeisle-companion' );
 		}
 
 		return $return;
@@ -202,7 +202,7 @@ class ContactForm extends Base {
 			<!-- view port meta tag -->
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-			<title><?php echo esc_html__( 'Mail From: ', 'textdomain' ) . esc_html( $data['name'] ); ?></title>
+			<title><?php echo esc_html__( 'Mail From: ', 'themeisle-companion' ) . esc_html( $data['name'] ); ?></title>
 		</head>
 		<body>
 		<table>
@@ -210,7 +210,7 @@ class ContactForm extends Base {
 			<tr>
 				<th>
 					<h3>
-						<?php esc_html_e( 'Content Form submission from ', 'textdomain' ); ?>
+						<?php esc_html_e( 'Content Form submission from ', 'themeisle-companion' ); ?>
 						<a href="<?php echo esc_url( get_site_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
 					</h3>
 					<hr/>
@@ -232,7 +232,7 @@ class ContactForm extends Base {
 			<tr>
 				<td>
 					<hr/>
-					<?php esc_html_e( 'You recieved this email because your email address is set in the content form settings on ' ) ?>
+					<?php esc_html_e( 'You recieved this email because your email address is set in the content form settings on ', 'themeisle-companion' ) ?>
 					<a href="<?php echo esc_url( get_site_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
 				</td>
 			</tr>
@@ -288,7 +288,7 @@ class ContactForm extends Base {
 	 */
 	public function __clone() {
 		// Cloning instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'themeisle-companion' ), '1.0.0' );
 	}
 
 	/**
@@ -300,6 +300,6 @@ class ContactForm extends Base {
 	 */
 	public function __wakeup() {
 		// Unserializing instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'themeisle-companion' ), '1.0.0' );
 	}
 }

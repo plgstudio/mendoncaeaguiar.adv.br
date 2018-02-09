@@ -2,13 +2,13 @@
 (function ($) {
 	$( document ).ready(
 		function () {
-				checkImageSize();
+			checkImageSize();
 		}
 	);
 
 	$( window ).resize(
 		function () {
-				checkImageSize();
+			checkImageSize();
 		}
 	);
 
@@ -39,7 +39,7 @@
 	function checkImageSize() {
 		$( '.obfx-grid .obfx-grid-col' ).each(
 			function () {
-					var container = $( this ).find( '.obfx-grid-col-image' ),
+				var container = $( this ).find( '.obfx-grid-col-image' ),
 					containerWidth = $( this ).find( '.obfx-grid-col-image' ).width(),
 					containerHeight = $( this ).find( '.obfx-grid-col-image' ).height(),
 					imageWidth = $( this ).find( '.obfx-grid-col-image img' ).width(),

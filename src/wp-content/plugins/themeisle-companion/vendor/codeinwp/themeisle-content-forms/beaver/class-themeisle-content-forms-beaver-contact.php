@@ -16,9 +16,9 @@ class BeaverModuleContact extends BeaverModule {
 
 		parent::__construct(
 			array(
-				'name'        => esc_html__( 'Contact', 'textdomain' ),
-				'description' => esc_html__( 'A contact form.', 'textdomain' ),
-				'category'    => esc_html__( 'OrbitFox Modules', 'textdomain' ),
+				'name'        => esc_html__( 'Contact', 'themeisle-companion' ),
+				'description' => esc_html__( 'A contact form.', 'themeisle-companion' ),
+				'category'    => esc_html__( 'OrbitFox Modules', 'themeisle-companion' ),
 				'dir'         => dirname( __FILE__ ),
 				'url'         => plugin_dir_url( __FILE__ )
 			)

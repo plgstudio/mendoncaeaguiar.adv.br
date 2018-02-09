@@ -16,7 +16,7 @@ foreach ( $controls as $control_name => $control ) {
 		<div class="content-forms-required">
 			<?php
 			printf(
-				esc_html__( 'The %s setting is required!', 'textdomain' ),
+				esc_html__( 'The %s setting is required!', 'themeisle-companion' ),
 				'<strong>' . $control['label'] . '</strong>'
 			); ?>
 		</div>
@@ -37,7 +37,7 @@ foreach ( $fields as $key => $field ) {
 $controls = $form_settings['controls'];
 
 /** == FORM SUBMIT BUTTON == */
-$btn_label = esc_html__( 'Submit', 'textdomain' );
+$btn_label = esc_html__( 'Submit', 'themeisle-companion' );
 
 if ( ! empty( $settings->submit_label ) ) {
 	$btn_label = $settings->submit_label;
