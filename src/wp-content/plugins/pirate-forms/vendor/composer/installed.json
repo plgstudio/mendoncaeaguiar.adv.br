@@ -6,15 +6,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Codeinwp/themeisle-sdk.git",
-            "reference": "ae69f3966081f0a7c7c468c00275c411cc0be063"
+            "reference": "032c9dcc34c7c8589eebe3e0b3c72418fcbd3d76"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Codeinwp/themeisle-sdk/zipball/ae69f3966081f0a7c7c468c00275c411cc0be063",
-            "reference": "ae69f3966081f0a7c7c468c00275c411cc0be063",
+            "url": "https://api.github.com/repos/Codeinwp/themeisle-sdk/zipball/032c9dcc34c7c8589eebe3e0b3c72418fcbd3d76",
+            "reference": "032c9dcc34c7c8589eebe3e0b3c72418fcbd3d76",
             "shasum": ""
         },
-        "time": "2018-01-04 13:30:43",
+        "time": "2018-01-13 12:07:08",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -71,5 +71,50 @@
         "license": [
             "MIT"
         ]
+    },
+    {
+        "name": "mailin-api/mailin-api-php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mailin-api/mailin-api-php.git",
+            "reference": "b437808566f46979309f01b796c31b7b6bacfb42"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mailin-api/mailin-api-php/zipball/b437808566f46979309f01b796c31b7b6bacfb42",
+            "reference": "b437808566f46979309f01b796c31b7b6bacfb42",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.3"
+        },
+        "time": "2017-04-19 13:00:21",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Sendinblue": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "SendinBlue",
+                "homepage": "https://www.sendinblue.com/"
+            }
+        ],
+        "description": "Official SendinBlue provided API V2 wrapper",
+        "homepage": "https://github.com/mailin-api/mailin-api-php"
     }
 ]

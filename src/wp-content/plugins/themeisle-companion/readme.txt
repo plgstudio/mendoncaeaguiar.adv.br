@@ -89,10 +89,10 @@ Activating the Orbit Fox Companion plugin is just like any other plugin. If you'
 5. Social Sharing Module
 
 == Changelog ==
-= 2.3.4 - 2018-02-08  = 
+= 2.4.0 - 2018-02-16  = 
 
-* Enhancements for Hestia Theme 
-* Made structure more modular
+* Adds a new module for uptime monitor of your website. 
+* Adds 4 more hooks for modules related actions.
 
 
 = 2.3.1 - 2018-01-17  = 

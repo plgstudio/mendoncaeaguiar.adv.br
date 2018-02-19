@@ -1,8 +1,8 @@
 
- ### v2.3.4 - 2018-02-08 
+ ### v2.4.0 - 2018-02-16 
  **Changes:** 
- * Enhancements for Hestia Theme 
-* Made structure more modular
+ * Adds a new module for uptime monitor of your website. 
+* Adds 4 more hooks for modules related actions.
  
  ### v2.3.1 - 2018-01-17 
  **Changes:** 
